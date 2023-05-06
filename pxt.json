@@ -1,5 +1,5 @@
 {
-    "name": "microbit-ej-ping-pobg-with-sprites-01",
+    "name": "microbit-ej-ping-pong-with-sprites-01",
     "description": "",
     "dependencies": {
         "core": "*",
