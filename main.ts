@@ -25,17 +25,17 @@ basic.forever(function () {
         labda.change(LedSpriteProperty.X, Xirany * -1)
         labda.change(LedSpriteProperty.Y, -1)
     } else {
-        if (labda.get(LedSpriteProperty.Y) < 0) {
-            Xirany = 1
+        if (labda.get(LedSpriteProperty.Y) <= 0) {
+            Yirany = 1
             Xirany = randint(-1, 1)
-        } else if (labda.get(LedSpriteProperty.Y) > 4) {
+        } else if (labda.get(LedSpriteProperty.Y) >= 4) {
             labda.set(LedSpriteProperty.Blink, 1)
             basic.pause(2000)
             game.gameOver()
         }
-        if (labda.get(LedSpriteProperty.X) < 0) {
+        if (labda.get(LedSpriteProperty.X) <= 0) {
             Xirany = 1
-        } else if (labda.get(LedSpriteProperty.X) > 0) {
+        } else if (labda.get(LedSpriteProperty.X) <= 4) {
             Xirany = -1
         }
         basic.pause(500)
