@@ -22,8 +22,16 @@ basic.forever(function () {
     labda.change(LedSpriteProperty.X, Xirany)
     labda.change(LedSpriteProperty.Y, Yirany)
     if (labda.isTouching(utoBal) || labda.isTouching(utoJobb)) {
-        labda.change(LedSpriteProperty.X, Xirany * -1)
-        labda.change(LedSpriteProperty.Y, -1)
+        if (labda.get(LedSpriteProperty.X) > 1) {
+            labda.change(LedSpriteProperty.X, Xirany * -1)
+        } else if (labda.get(LedSpriteProperty.X) < 4) {
+            labda.change(LedSpriteProperty.X, Xirany * 1)
+        }
+        if (labda.get(LedSpriteProperty.Y) > 2) {
+            labda.change(LedSpriteProperty.Y, Xirany * -1)
+        } else if (labda.get(LedSpriteProperty.Y) > 4) {
+            labda.change(LedSpriteProperty.X, Yirany * -1)
+        }
     } else {
         if (labda.get(LedSpriteProperty.Y) <= 0) {
             Yirany = 1
